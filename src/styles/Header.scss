@@ -1,0 +1,47 @@
+@import 'variables.scss';
+
+
+.header-nav-bar {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  align-items: center;
+  
+  height: $nav-bar-heght;
+
+  background-color: rgba(201, 229, 255, 0.4);
+  border-radius: calc( 1.2em ); //calc( ($nav-bar-hegh)*2 / 3);
+}
+
+.base-styled-btn {
+  height: 2em;
+  width: 6em;
+  background-color: rgba(88, 124, 216, 0.7);
+  border: none;
+  border-radius: 0.7em;
+}
+
+.theme-change-btn {
+  height: 2em;
+  width: 2em;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 1em;
+  border: none;
+}
+
+.header-nav-bar-item
+{
+  display: flex;
+  column-gap: 2em;
+
+}
+
+.left-side {
+  background-color: transparent;
+  justify-self: center;
+}
+
+.right-side {
+  background-color: transparent;
+  justify-self: end;
+  margin-right: 1em;
+}
