@@ -9,7 +9,7 @@
   height: $nav-bar-heght;
 
   background-color: rgba(201, 229, 255, 0.4);
-  border-radius: calc( 1.2em ); //calc( ($nav-bar-hegh)*2 / 3);
+  border-radius: calc( (#{$nav-bar-heght} * 2) / 3);
 }
 
 .base-styled-btn {
