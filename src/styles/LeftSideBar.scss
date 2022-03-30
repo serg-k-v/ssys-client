@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+.left-side-bar {
+    display: grid;
+    align-items: center;
+
+    width: $nav-bar-heght;
+    // height: 80%;
+
+    background-color: rgba(201, 229, 255, 0.4);
+    border-radius: calc( (#{$nav-bar-heght} * 2) / 3);
+
+}
