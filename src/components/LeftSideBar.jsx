@@ -4,9 +4,8 @@ const LeftSideBar = () => {
 
     return (
         <div className="left-side-bar">
-            <svg height="10" width="10"><circle cx="6" cy="6" r="3"  fill="red" /></svg>
-            
-            <nav>
+            <nav className="upper-bar">
+                <svg height="10" width="10"><circle cx="6" cy="6" r="3"  fill="red" /></svg>
                 <button className="left-side-bar-btn"></button>
                 <button className="left-side-bar-btn"></button>
                 <button className="left-side-bar-btn"></button>

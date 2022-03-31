@@ -5,9 +5,9 @@ import '../styles/Audit.scss'
 
 const Audit = () => {
   return (
-    <div className="content-container">
+    <div className="body-container">
       <Header />
-      <div >
+      <div className="content-container" >
         <LeftSideBar/>
 
       </div>
