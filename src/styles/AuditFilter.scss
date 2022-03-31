@@ -1,0 +1,17 @@
+@import 'variables.scss';
+
+.audit-filter {
+    height: 4em;
+    width: 100%;
+    background-color: map-get($base-colors, base-blue );
+    align-self: center;
+    border-radius: 1em;
+}
+
+.filter-btn {
+    background-color: map-get($base-colors, blue-btn );
+}
+
+.search-btn {
+    background-color: map-get($base-colors, pink-btn );
+}

@@ -14,14 +14,22 @@
   background-color: map-get($base-colors, black-btn );
   border-radius: 1em;
   border: none;
+  padding: 0;
 }
 
-.left-side-bar-btn {
-  height: 2em;
-  width: 2em;
-  background-color: map-get($base-colors, pink-btn );
+$left-side-bar-icon-wh: 2em;
+
+
+.square-btn {
+  height: $left-side-bar-icon-wh;
+  width: $left-side-bar-icon-wh;
   border: none;
   border-radius: 0.3em;
+  padding: 0;
+}
+
+.pink-btn {
+  background-color: map-get($base-colors, pink-btn );
 }
 
 .black-btn {

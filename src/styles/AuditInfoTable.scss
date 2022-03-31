@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+.audit-info-table {
+    background-color: map-get($base-colors, base-blue );
+    align-self: stretch;
+    height: 100%;
+
+    border-radius: 1em;
+}

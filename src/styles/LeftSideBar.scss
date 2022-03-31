@@ -28,3 +28,9 @@
 .upper-bar #left-side-menu-circle {
     fill: map-get($base-colors, pink-btn );
 }
+
+.icon-left-side-bar {
+    width: $square-btn-wh;
+    height: $square-btn-wh;
+    transform: scale(0.8);
+}
