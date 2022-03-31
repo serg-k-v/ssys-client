@@ -4,12 +4,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // align-items: center;
 
     width: $nav-bar-heght;
-    height: calc(100vh - #{$nav-bar-heght} - 8em);
+    height: calc(100vh - #{$nav-bar-heght} - 12em);
 
-    background-color: rgba(201, 229, 255, 0.4);
+    background-color: map-get($base-colors, base-blue );
     border-radius: calc( (#{$nav-bar-heght} * 2) / 3);
 
 }
@@ -20,4 +19,12 @@
     align-items: center;
     padding-top: 1em;
     gap: 1em 0;
+}
+
+.down-bar {
+    padding-bottom: 2em;
+}
+
+.upper-bar #left-side-menu-circle {
+    fill: map-get($base-colors, pink-btn );
 }

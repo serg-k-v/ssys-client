@@ -1,10 +1,12 @@
 import "../styles/Header.scss";
 import "../styles/Buttons.scss";
 
+import logo from '../images/logo.svg'
+
 const Header = () => {
   return (
     <div className="header">
-      <img srs="logo.svg" alt="Audit logo" />
+      <img src={logo} alt="Audit logo" className="main-logo-audit" />
       <nav className="header-nav-bar">
         <div className="header-nav-bar-item left-side">
           <button className="base-styled-btn" />

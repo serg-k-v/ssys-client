@@ -5,14 +5,16 @@ const LeftSideBar = () => {
     return (
         <div className="left-side-bar">
             <nav className="upper-bar">
-                <svg height="10" width="10"><circle cx="6" cy="6" r="3"  fill="red" /></svg>
+                <svg height="10" width="10"><circle id="left-side-menu-circle" cx="6" cy="6" r="3" /></svg>
                 <button className="left-side-bar-btn"></button>
                 <button className="left-side-bar-btn"></button>
-                <button className="left-side-bar-btn"></button>
-                <button className="left-side-bar-btn"></button>
+                <button className="left-side-bar-btn black-btn"></button>
+                <button className="left-side-bar-btn black-btn"></button>
             </nav>
             
-            <button className="left-side-bar-btn"></button>
+            <div className="down-bar">
+                <button className="left-side-bar-btn black-btn"></button>
+            </div>
         </div>
     );
 }
