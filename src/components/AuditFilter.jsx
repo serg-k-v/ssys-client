@@ -6,12 +6,17 @@ const AuditFilter = () => {
 
     return (
         <div className="audit-filter">
-            <input ></input>
-            <input ></input>
-            <input ></input>
-            <input ></input>
-            <button className="square-btn filter-btn"></button>
-            <button className="square-btn search-btn"></button>
+            <div className="audit-filter-input">
+                <input type="text" className="filter-input" ></input>
+                <input type="text" className="filter-input" ></input>
+                <input type="text" className="filter-input" ></input>
+                <input type="text" className="filter-input" ></input>
+                <div>
+                    <button className="square-btn filter-btn"></button>
+                    <button className="square-btn search-btn"></button>
+                </div>
+            </div>
+            
         </div>
     );
 }
