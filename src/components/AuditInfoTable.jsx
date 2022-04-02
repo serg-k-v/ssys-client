@@ -1,5 +1,16 @@
 import '../styles/AuditInfoTable.scss'
 
+const HeaderElement = (props) => {
+    return (
+        <th>
+            <section className="adit-table__header-container">
+                {props.title}
+                <span className="th__underline"></span>
+            </section>
+        </th>
+    );
+}
+
 const AuditInfoTable = () => {
 
     const data = [{"uid":1111, "user":"user", "exec":"docker"},
@@ -15,20 +26,36 @@ const AuditInfoTable = () => {
                   {"uid":2222, "user":"akuma", "exec":"/bin/bash"},
                   {"uid":2222, "user":"akuma", "exec":"/bin/bash"},
                   {"uid":2222, "user":"akuma", "exec":"/bin/bash"},
+                  {"uid":2222, "user":"akuma", "exec":"/bin/bash"},
+                  {"uid":2222, "user":"akuma", "exec":"/bin/bash"},
+                  {"uid":2222, "user":"akuma", "exec":"/bin/bash"},
+                  {"uid":2222, "user":"akuma", "exec":"/bin/bash"},
+                  {"uid":2222, "user":"akuma", "exec":"/bin/bash"},
                 ]
     return (
-        <table className="audit-info-table">
-            <tr>
-                <th>Uer Identifer</th>
-                <th>User Name</th>
-                <th>Executable</th>
-            </tr>
-            {data.map(row => <tr>
-                    <td>{row.uid}</td>
-                    <td>{row.user}</td>
-                    <td>{row.exec}</td>
-                </tr>)}
-        </table>
+        <div className="audit-info">
+            <div className="audit-info-table">
+                <table>
+                    <thead>
+                    <tr>
+                        <HeaderElement title="Uer Identifer"/>
+                        <HeaderElement title="User Name"/>
+                        <HeaderElement title="Executable"/>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {data.map(row => 
+                        <tr>
+                            <td>{row.uid}</td>
+                            <td>{row.user}</td>
+                            <td>{row.exec}</td>
+                        </tr>
+                        )}
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
     );
 }
 

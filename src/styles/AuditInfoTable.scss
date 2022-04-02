@@ -1,8 +1,53 @@
 @import 'variables.scss';
+@import 'scroll.scss';
 
-.audit-info-table {
+.audit-info {
     background-color: map-get($base-colors, base-blue );
     align-self: stretch;
     height: 100%;
     border-radius: 1em;
+    padding: 1em;
+}
+
+.audit-info-table {
+    overflow-y: auto;
+    // height: 200px; // for test scroll
+}
+
+.audit-info-table table {
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0.6rem 0.3rem;
+}
+
+.audit-info-table thead {
+    text-align: center;
+
+}
+
+.audit-info-table tbody {
+    text-align: left;
+}
+
+.audit-info-table td {
+    height: 2em;
+    background-color: #ffffff99;
+    border-radius: 0.8em;
+    padding: 0 1rem 0 1rem;
+}
+
+.adit-table__header-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.th__underline {
+    display: inline-block;
+    height: 0.2rem;
+    width:  70%;
+    border-radius: 0.1rem;
+    background-color: map-get($base-colors, pink-btn );
 }
