@@ -1,4 +1,4 @@
-import '../styles/AuditInfoTable.scss'
+import '../../styles/Audit/AuditInfoTable.scss'
 
 const HeaderElement = (props) => {
     return (

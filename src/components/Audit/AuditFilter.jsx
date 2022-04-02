@@ -1,9 +1,9 @@
 
-import '../styles/AuditFilter.scss'
-import '../styles/Buttons.scss'
+import '../../styles/Audit/AuditFilter.scss'
+import '../../styles/Buttons.scss'
 
-import serach from '../images/research.svg'
-import expandFilter from '../images/expand-filter.svg'
+import serach from '../../images/research.svg'
+import expandFilter from '../../images/expand-filter.svg'
 
 const AuditFilter = () => {
 

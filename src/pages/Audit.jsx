@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 import LeftSideBar from "../components/LeftSideBar";
-import AuditFilter from "../components/AuditFilter";
-import AuditInfoTable from "../components/AuditInfoTable";
+import AuditFilter from "../components/Audit/AuditFilter";
+import AuditInfoTable from "../components/Audit/AuditInfoTable";
 
-import '../styles/Audit.scss'
+import '../styles/Audit/Audit.scss'
 
 const Audit = () => {
   return (

@@ -1,5 +1,5 @@
-@import 'variables.scss';
-@import 'scroll.scss';
+@import '../variables.scss';
+@import '../scroll.scss';
 
 .audit-info {
     background-color: map-get($base-colors, base-blue );
