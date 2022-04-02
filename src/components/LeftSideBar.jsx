@@ -8,9 +8,9 @@ const LeftSideBar = () => {
     return (
         <div className="left-side-bar">
             <nav className="upper-bar">
-                <svg height="10" width="10"><circle id="left-side-menu-circle" cx="6" cy="6" r="3" /></svg>
+                <svg height="14" width="14"><circle id="left-side-menu-circle" cx="7" cy="7" r="3.5" /></svg>
                 <button className="square-btn pink-btn">
-                    <img src={home} alt="Home" className="icon-left-side-bar"/>
+                    <img src={home} alt="Home" className="btn-icon"/>
                 </button>
                 <button className="square-btn pink-btn"></button>
                 <button className="square-btn black-btn"></button>
@@ -19,7 +19,7 @@ const LeftSideBar = () => {
             
             <div className="down-bar">
                 <button className="square-btn black-btn">
-                    <img src={market} alt="Market" className="icon-left-side-bar"/>
+                    <img src={market} alt="Market" className="btn-icon"/>
                 </button>
             </div>
         </div>

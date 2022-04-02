@@ -36,3 +36,10 @@
     border-width: 0;
     flex-grow: 2;
 }
+
+.audit-filter__btns-container
+{
+    display: flex;
+    flex-direction: row;
+    gap: 0 0.8em;
+}

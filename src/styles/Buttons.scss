@@ -35,3 +35,10 @@ $left-side-bar-icon-wh: 2em;
 .black-btn {
   background-color: map-get($base-colors, black-btn );
 }
+
+
+.btn-icon {
+  width: $square-btn-wh;
+  height: $square-btn-wh;
+  transform: scale(0.8);
+}

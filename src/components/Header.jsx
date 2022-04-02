@@ -17,7 +17,7 @@ const Header = () => {
         <div className="header-nav-bar-item right-side">
           <button className="base-styled-btn">Log in</button>
           <button className="theme-change-btn">
-            <img src={whiteTheme} alt="Theme" className="icon-left-side-bar"/>
+            <img src={whiteTheme} alt="Theme" className="btn-icon"/>
           </button>
         </div>
       </nav>
