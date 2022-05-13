@@ -2,6 +2,7 @@ import '../styles/LeftSideBar.scss'
 
 import market from '../images/market.svg'
 import home from '../images/home.svg'
+import newAuditRule from '../images/add-new-rule.svg'
 
 const LeftSideBar = () => {
 
@@ -12,7 +13,9 @@ const LeftSideBar = () => {
                 <button className="square-btn pink-btn">
                     <img src={home} alt="Home" className="btn-icon"/>
                 </button>
-                <button className="square-btn pink-btn"></button>
+                <button className="square-btn pink-btn">
+                    <img src={newAuditRule} alt="New audit rule" className="btn-icon"/>
+                </button>
                 <button className="square-btn black-btn"></button>
                 <button className="square-btn black-btn"></button>
             </nav>

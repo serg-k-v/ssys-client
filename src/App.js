@@ -1,11 +1,16 @@
 import "./styles.css";
 
-import Audit from "./pages/Audit";
+import AppRouter from "./components/AppRouter"
 
 export default function App() {
   return (
     <div className="App">
-      <Audit />
+      <Router>
+        <Header/>
+        <div className="content-container" >
+          <AppRouter/>
+        </div>
+      </Router>
     </div>
   );
 }
