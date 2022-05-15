@@ -6,13 +6,13 @@ import {
     Redirect
 } from "react-router-dom"
 
-import { AuthContext } from "../context";
 
 import {privateRoutes, publicRoutes} from '../router'
+import { selectIsAuth } from "../store/reducers/AuthReducer";
 
 const AppRouter = () => {
-    const {isAuth, setIsAuth} = useContext(AuthContext);
-
+    const isAuth = useSelector(selectIsAuth);
+    
     return (
         isAuth ?
         <Switch>
