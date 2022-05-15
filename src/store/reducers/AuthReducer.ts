@@ -1,12 +1,27 @@
 import { IUser } from "../../models/IUser";
 import AuthService from "../../services/AuthService";
 
-import { createSlice, useDispatch } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { AuthResponse } from "../../models/AuthResponse";
+import { AppDispatch } from "../store";
 
 interface AuthState {
     user : IUser;
     isAuth : boolean;
 }
+
+// export const fetchLoginThunk = createAsyncThunk( 'auth/login', 
+//     async (username:string, password:string) => {
+//     const responce = await AuthService.login(username, password)
+//     return responce.data
+// })
+
+// export const fetchLogoutThunk = createAsyncThunk( 'auth/login', 
+//     async () => {
+//     const responce = await AuthService.logout()
+//     return responce.data
+// })
+
 
 const authSlice = createSlice( {
     name: "auth",
@@ -17,33 +32,53 @@ const authSlice = createSlice( {
     },
 
     reducers : {
-
-        login : (state : AuthState, username:string, password:string) => {
+        login(state, action) {
             try {
-                const response = useDispatch( AuthService.login(username, password));
-                localStorage.setItem('token', response.data.accessToken);
+                localStorage.setItem('token', action.payload.accessToken);
                 state.isAuth = true;
-                state.user = response.data.user;
+                state.user = action.payload.user;
             } catch (error) {
-                console.log(error.response?.data?.message);
+                // console.log(error.response?.data?.message);
             }
         },
 
+        logout(state, action) {
 
-        logout : (state : AuthState) => {
-            try {
-                const response = useDispatch(AuthService.logout());
-                localStorage.removeItem('token');
-                state.isAuth = false;
-                state.user = {};
-            } catch (error) {
-                console.log(error.response?.data?.message);
-            }
-        }
+        },
+
+    },
+
+    extraReducers: (builder) => {
+        
+        // builder.addCase(fetchLoginThunk.fulfilled, ( state, action ) => {
+        //     try {
+        //         localStorage.setItem('token', action.payload.accessToken);
+        //         state.isAuth = true;
+        //         state.user = action.payload.user;
+        //     } catch (error) {
+        //         // console.log(error.response?.data?.message);
+        //     }
+        // }),
+        
+        // builder.addCase(fetchLogoutThunk.fulfilled, ( state, action ) => {
+        //     try {
+        //         localStorage.removeItem('token');
+        //         state.isAuth = false;
+        //         state.user = {};
+        //     } catch (error) {
+        //         // console.log(error.response?.data?.message);
+        //     }
+        // }),
     }
 })
 
 export const { login, logout } = authSlice.actions
 export const selectIsAuth = (state:AuthState) => state.isAuth;
-
 export default authSlice.reducer;
+
+
+export const fetchLogin = (username:string, password:string) => async (dispatch:AppDispatch) => {
+    // dispatch(usersLoading())
+    const response = await AuthService.login(username, password)
+    dispatch(login(response.data))
+}

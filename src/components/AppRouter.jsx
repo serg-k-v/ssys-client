@@ -1,21 +1,17 @@
-import React, { useContext } from "react";
-
 import {
     Route,
-    Switch,
-    Redirect
+    Routes,
+    Navigate
 } from "react-router-dom"
-
-
 import {privateRoutes, publicRoutes} from '../router'
-import { selectIsAuth } from "../store/reducers/AuthReducer";
+import { useAppSelector } from '../hooks/redux'
 
 const AppRouter = () => {
-    const isAuth = useSelector(selectIsAuth);
-    
+    const isAuth = useAppSelector( state => state.auth.isAuth);
+
     return (
         isAuth ?
-        <Switch>
+        <Routes>
             { privateRoutes.map(route => 
                 <Route
                     component={route.component}
@@ -24,10 +20,10 @@ const AppRouter = () => {
                     key={route.path}
                 />
             )}
-            <Redirect to="/error"/>
-        </Switch>
+            <Navigate to="/error"/>
+        </Routes>
         :
-        <Switch>
+        <Routes>
             { publicRoutes.map(route => 
                 <Route
                     component={route.component}
@@ -36,8 +32,8 @@ const AppRouter = () => {
                     key={route.path}
                 />
             )}
-            <Redirect to="/login"/>
-        </Switch>
+            <Navigate to="/login"/>
+        </Routes>
     );
 }
 

@@ -1,18 +1,17 @@
+import { withRouter, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
-    let history = useHistory();
-    const {isAuth, setIsAuth} = useContext(AuthContext);
+    let history = useNavigate();
 
     const Login = event => {
         event.preventDefault()
-        history.push('/eye-history')
-        setIsAuth(true)
+        history.push('/audit')
     }
 
     const Create = event => {
         event.preventDefault()
-        history.push('/create-account')
+        history.push('/register')
     }
 
     return (
@@ -20,9 +19,9 @@ const Login = () => {
             <input ></input>
             <input></input>
             <input></input>
-            <button className="pink-btn">Login</button>
+            <button onClick={Login} className="pink-btn">Login</button>
         </div>
     );
 };
 
-export default withRouter(Login);
+export default Login;

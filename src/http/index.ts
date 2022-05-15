@@ -3,13 +3,17 @@ import axios from 'axios'
 export const API_URL = 'http//localhost:5000/api/v1'
 
 const $api = axios.create({
-    withCredetioals: true,
-    daseURL: API_URL,
-})
+    withCredentials: true,
+    baseURL: API_URL,
+});
 
-$api.interceprors.request.use( (config) => {
-    config.headers.Authorisation = `Bearer ${localStorage.getItem('token')}`
-    return config;
-})
+$api.interceptors.request.use( req => {
+    if (req?.headers !== undefined)
+    {
+        req.headers.authorisation =  `Bearer ${localStorage.getItem('token')}`;
+    }
+
+    return req;
+});
 
 export default $api;

@@ -1,4 +1,4 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit"
+import {combineReducers, configureStore, applyMiddleware } from "@reduxjs/toolkit"
 import AuthReducer from "./reducers/AuthReducer"
 
 const rootReducer = combineReducers({
@@ -7,13 +7,13 @@ const rootReducer = combineReducers({
 
 export const setupStore = () => {
     return configureStore( {
-        reducer : rootReducer
+        reducer : rootReducer,
     })
 }
 
 export default setupStore;
-// export RootState = ReturnType<typeof rootReducer>
-// export AppStore =  ReturnType<typeof setupStore>
-// export AppDispatch = AppStore['dispatch']
+export type RootState = ReturnType<typeof rootReducer>
+export type AppStore =  ReturnType<typeof setupStore>
+export type AppDispatch = AppStore['dispatch']
 
 
