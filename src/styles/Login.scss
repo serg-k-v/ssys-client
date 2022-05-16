@@ -1,0 +1,46 @@
+@import 'variables.scss';
+
+.login-container-outer {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    height: calc( 100vh - #{$nav-bar-heght} - 5em );
+}
+
+.login-container {
+    display: inline-flex;
+    width: 35%;
+    height: 40%;
+    max-width: 40em;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8em 8em 8em 8em;
+    background-color: rgba(201, 229, 255, 0.4);
+    border-radius: calc( (#{$nav-bar-heght} * 2) / 3);
+}
+
+.login-form {
+    display: inline-grid;
+    margin-bottom: 4em;
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 2;
+    row-gap: 1.5em;
+    column-gap: 1.5em;
+}
+
+// .login-form 
+
+.login-form-btn {
+    height: 2em;
+    background-color: map-get($base-colors,  pink-btn );
+    border: none;
+    border-radius: 0.7em;
+}
+
+.pswd-item {
+    grid-column: span 2;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+
+.audit-input {
+    border-radius: 0.8em;
+    height: 2.2em;
+    border: none;
+}
+
+input.audit-input {
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.audit-input:focus{
+    outline: none;
+}
+
+// .audit-input:focus, 

@@ -10,29 +10,12 @@ const AppRouter = () => {
     const isAuth = useAppSelector( state => state.auth.isAuth);
 
     return (
-        isAuth ?
         <Routes>
-            { privateRoutes.map(route => 
-                <Route
-                    component={route.component}
-                    path={route.path}
-                    exact={route.exact}
-                    key={route.path}
-                />
-            )}
-            <Navigate to="/error"/>
-        </Routes>
-        :
-        <Routes>
-            { publicRoutes.map(route => 
-                <Route
-                    component={route.component}
-                    path={route.path}
-                    exact={route.exact}
-                    key={route.path}
-                />
-            )}
-            <Navigate to="/login"/>
+            isAuth ?
+            { privateRoutes.map(route => <Route  path={route.path} element={route.component} key={route.path} /> )}
+            :
+            { publicRoutes.map( route => <Route  path={route.path} element={route.component} key={route.path} /> )}
+            <Route path="*" element={<Navigate to="/error"/>} />
         </Routes>
     );
 }

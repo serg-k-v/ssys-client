@@ -42,8 +42,14 @@ const authSlice = createSlice( {
             }
         },
 
-        logout(state, action) {
-
+        logout(state) {
+            try {
+                localStorage.removeItem('token');
+                state.isAuth = false;
+                state.user = {};
+            } catch (error) {
+                // console.log(error.response?.data?.message);
+            }
         },
 
     },
@@ -78,7 +84,11 @@ export default authSlice.reducer;
 
 
 export const fetchLogin = (username:string, password:string) => async (dispatch:AppDispatch) => {
-    // dispatch(usersLoading())
     const response = await AuthService.login(username, password)
     dispatch(login(response.data))
+}
+
+export const fetchLogout = () => async (dispatch:AppDispatch) => {
+    const response = await AuthService.logout()
+    dispatch(logout())
 }
