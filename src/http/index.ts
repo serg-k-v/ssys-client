@@ -3,8 +3,9 @@ import axios from 'axios'
 export const API_URL = 'http://localhost:5050/api/v1'
 
 const $api = axios.create({
-    withCredentials: true,
+    withCredentials: false,
     baseURL: API_URL,
+    headers: { 'crossDomain': true },
 });
 
 $api.interceptors.request.use( req => {
