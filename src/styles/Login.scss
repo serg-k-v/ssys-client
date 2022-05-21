@@ -11,7 +11,7 @@
     display: inline-flex;
     width: 35%;
     height: 40%;
-    max-width: 40em;
+    max-width: 25em;
     flex-direction: column;
     justify-content: center;
     padding: 8em 8em 8em 8em;
@@ -37,7 +37,7 @@
     border-radius: 0.7em;
 }
 
-.pswd-item {
+.wide-item {
     grid-column: span 2;
 }
 

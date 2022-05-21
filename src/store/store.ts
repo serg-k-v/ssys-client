@@ -5,15 +5,13 @@ const rootReducer = combineReducers({
     auth : AuthReducer
 })
 
-export const setupStore = () => {
-    return configureStore( {
-        reducer : rootReducer,
-    })
-}
+const store = configureStore( {
+    reducer : rootReducer,
+})
 
-export default setupStore;
-export type RootState = ReturnType<typeof rootReducer>
-export type AppStore =  ReturnType<typeof setupStore>
-export type AppDispatch = AppStore['dispatch']
+export default store;
+export type RootState = ReturnType<typeof  store.getState>
+export type AppStore =  typeof store
+export type AppDispatch = typeof store.dispatch
 
 
