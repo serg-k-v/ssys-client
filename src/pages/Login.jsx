@@ -21,7 +21,7 @@ const Login = () => {
         dispatch(fetchLogin( username, pswd ))
 
         if ( isAuth ) {
-            navigate('/audit')
+            navigate('/audit-list')
         }
     }
 
