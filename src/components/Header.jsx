@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     const isAuth = useAppSelector( state => state.auth.isAuth);
-    const [logXtext, setLogXtext] = useState(isAuth ? "Logout" : "Login" )
+    const [logXtext, setLogXtext] = useState(isAuth ? "Login" : "Logout" )
     const dispatch = useAppDispatch();
     let navigate = useNavigate();
     
@@ -23,10 +23,10 @@ const Header = () => {
 
         if ( isAuth ) {
             dispatch(fetchLogout())
-            setLogXtext("Login")
+            setLogXtext("Logout")
         } else {
             navigate('/login')
-            setLogXtext("Logout")
+            setLogXtext("Login")
         }
     }
 

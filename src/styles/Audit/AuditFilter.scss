@@ -28,13 +28,32 @@
 
 .filter-input {
     height: 2em;
-    padding: 0;
+    padding-left: 1em;
+    padding-right: 1em;
     
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0.8em;
     border: none;
     border-width: 0;
     flex-grow: 2;
+}
+
+input.filter-input:focus {
+    outline: none;
+}
+
+.filter-input-invalid {
+    height: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 0.8em;
+    border-style: solid;
+    border-color: rgba(255, 143, 143, 0.9);
+    flex-grow: 2;
+}
+
+input.filter-input-invalid:focus {
+    outline: none;
 }
 
 .audit-filter__btns-container

@@ -11,7 +11,11 @@ input.audit-input {
     padding-right: 1em;
 }
 
-.audit-input:focus{
+.audit-input:focus {
+    outline: none;
+}
+
+.audit-input-invalid {
     outline: none;
 }
 

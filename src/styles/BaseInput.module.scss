@@ -1,0 +1,24 @@
+
+
+.BaseInput {
+    border-radius: 0.8em;
+    height: 2.2em;
+    border: none;
+}
+
+input.BaseInput {
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+input.BaseInputInvalid {
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+.BaseInput:focus{
+    outline: none;
+}

@@ -89,6 +89,6 @@ export const fetchLogin = (username:string, password:string) => async (dispatch:
 }
 
 export const fetchLogout = () => async (dispatch:AppDispatch) => {
-    const response = await AuthService.logout()
+    // const response = await AuthService.logout() implement if it's requiered
     dispatch(logout())
 }
