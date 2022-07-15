@@ -3,8 +3,17 @@ import '../styles/LeftSideBar.scss'
 import market from '../images/market.svg'
 import home from '../images/home.svg'
 import newAuditRule from '../images/add-new-rule.svg'
+import { useNavigate } from "react-router-dom";
 
 const LeftSideBar = () => {
+    
+    let navigate = useNavigate();
+
+    const goToMarket = event => {
+        event.preventDefault()
+        console.log("Go to market")
+        navigate('/market-products')
+    }
 
     return (
         <div className="left-side-bar">
@@ -21,7 +30,7 @@ const LeftSideBar = () => {
             </nav>
             
             <div className="down-bar">
-                <button className="square-btn black-btn">
+                <button className="square-btn black-btn" onClick={goToMarket}>
                     <img src={market} alt="Market" className="btn-icon"/>
                 </button>
             </div>

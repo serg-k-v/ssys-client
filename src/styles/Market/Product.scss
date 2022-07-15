@@ -1,0 +1,8 @@
+@import '../variables.scss';
+
+.product {
+    width: 8em;
+    height: 8em;
+    background-color: map-get( $base-colors, base-blue );
+    border-radius: 1em;
+}
