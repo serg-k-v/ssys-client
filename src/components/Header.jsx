@@ -6,13 +6,13 @@ import whiteTheme from '../images/white-theme.svg'
 
 import { fetchLogout } from "../store/reducers/AuthReducer";
 import { useAppSelector, useAppDispatch } from '../hooks/redux'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
 const Header = () => {
     const isAuth = useAppSelector( state => state.auth.isAuth);
-    const [logXtext, setLogXtext] = useState(isAuth ? "Login" : "Logout" )
+    const [logXtext, setLogXtext] = useState(isAuth ? "Logout" : "Login")
     const dispatch = useAppDispatch();
     let navigate = useNavigate();
     
@@ -29,6 +29,10 @@ const Header = () => {
             setLogXtext("Login")
         }
     }
+
+    useEffect(()=>{
+        setLogXtext(isAuth ? "Logout" : "Login" )
+    }, [isAuth])
 
     return (
         <div className="header">

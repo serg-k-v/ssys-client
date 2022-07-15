@@ -37,8 +37,9 @@ const authSlice = createSlice( {
                 localStorage.setItem('token', action.payload.accessToken);
                 state.isAuth = true;
                 state.user = action.payload.user;
+                console.log( "token : ", action)
             } catch (error) {
-                // console.log(error.response?.data?.message);
+                console.log(error);
             }
         },
 
@@ -85,6 +86,7 @@ export default authSlice.reducer;
 
 export const fetchLogin = (username:string, password:string) => async (dispatch:AppDispatch) => {
     const response = await AuthService.login(username, password)
+    console.log("responce data", response.headers)
     dispatch(login(response.data))
 }
 
