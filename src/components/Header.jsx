@@ -39,9 +39,9 @@ const Header = () => {
             <img src={logo} alt="Audit logo" className="main-logo-audit" />
             <nav className="header-nav-bar">
             <div className="header-nav-bar-item left-side">
-                <button className="base-styled-btn"></button>
+                {/* <button className="base-styled-btn"/>
                 <button className="base-styled-btn" />
-                <button className="base-styled-btn" />
+                <button className="base-styled-btn" /> */}
             </div>
             <div className="header-nav-bar-item right-side">
                 <button className="base-styled-btn" onClick={logX}>{logXtext}</button>

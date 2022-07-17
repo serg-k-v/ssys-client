@@ -1,8 +1,37 @@
 @import '../variables.scss';
 
+
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 2em;
+    column-gap: 2em;
+    padding-left: 8em;
+    padding-right: 8em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
 .product {
     width: 8em;
     height: 8em;
     background-color: map-get( $base-colors, base-blue );
     border-radius: 1em;
+}
+
+.is-byed-true {
+    display: inline-block;
+    height: 0.2rem;
+    width: 70%;
+    border-radius: 0.1rem;
+    background-color: rgb(15, 238, 78);
+}
+
+.is-byed-false {
+    display: inline-block;
+    height: 0.2rem;
+    width: 70%;
+    border-radius: 0.1rem;
+    background-color: map-get($base-colors,  pink-base );
 }
