@@ -22,7 +22,7 @@ const Product = (props) => {
     return (
         <div className="product" onClick={e => onClickProduct(e,  props.isByed ? props.navLink : "") }>
             <p>{props.name}</p>
-            <p>cost: {props.cost}$</p>
+            { !props.isByed ?  <p>cost: {props.cost}$</p> : <p></p> }
             { props.isByed ? <span className="is-byed-true"></span> : <span className="is-byed-false"></span> }
         </div>
     );
